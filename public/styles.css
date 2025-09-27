@@ -1,0 +1,252 @@
+/* ===== Global Layout ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f4f4f9, #e6ecf5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container (used across all pages) */
+.app {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  width: 600px;
+  max-width: 90%;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.app:hover {
+  transform: translateY(-2px);
+}
+
+/* Page Headers */
+h1, h2, h3 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+/* Navigation (shared on all pages) */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #e0e7f1;
+  color: #333;
+  transition: background 0.2s ease;
+}
+
+nav a:hover {
+  background: #cfd8e3;
+}
+
+/* ===== To-Do Page Specific ===== */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 0 2px rgba(0,119,204,0.15);
+}
+
+/* Buttons */
+button {
+  padding: 10px 14px;
+  cursor: pointer;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Task List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f1f3f6;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+li:hover {
+  background: #e6ebf3;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: gray;
+  background: #f0f0f0;
+}
+
+/* Task Cards */
+#taskContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  background: #f9f9fb;
+  padding: 14px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.task-card.completed {
+  text-decoration: line-through;
+  color: gray;
+  background: #f2f2f2;
+}
+
+.task-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.task-actions button.delete {
+  background: #d9534f;
+}
+
+.task-actions button.delete:hover {
+  background: #b52b27;
+}
+
+#taskContainer.cards {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#taskContainer.cards .task-card {
+  width: 45%;
+  min-width: 200px;
+}
+
+/* ===== Stats Page ===== */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.stats p {
+  background: #f1f3f6;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ===== Dark Mode ===== */
+body.dark {
+  background: #121212;
+  color: #f4f4f9;
+}
+
+body.dark .app {
+  background: #1e1e1e;
+  color: #f4f4f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+body.dark li,
+body.dark .task-card,
+body.dark .stats p {
+  background: #2a2a2a;
+  color: #f4f4f9;
+}
+
+body.dark button {
+  background: #444;
+  color: #f4f4f9;
+}
+
+body.dark button:hover {
+  background: #666;
+}
+
+nav a {
+  background: #e0e7f1;
+  color: #333;
+}
+
+body.dark nav a {
+  background: #333;
+  color: #f4f4f9;
+}
+
+body.dark nav a:hover {
+  background: #555;
+}
+
+/* Dark mode toggle */
+.dark-toggle {
+  margin-bottom: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #444;
+  color: #fff;
+  cursor: pointer;
+}
+.dark-toggle:hover {
+  background: #666;
+}
