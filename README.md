@@ -3,7 +3,7 @@ This project is a continuation of a previous frontend To-Do List Application. Fo
 
 The purpose of this application is to get more hands-on experience building web applications that connect front-end pages to Node.js/Express back-end APIs.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/4ickIbTb8kw)
 
 # Web Pages
 - Home Page (index.html)
